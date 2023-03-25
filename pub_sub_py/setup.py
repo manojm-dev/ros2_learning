@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            "farmer 1 = pub_sub_py.farmer1:main",
         ],
     },
 )
