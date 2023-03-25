@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "farmer 1 = pub_sub_py.farmer1:main",
+            "farmer_1 = pub_sub_py.farmer1:main",
+            "shop = pub_sub_py.shop:main"
         ],
     },
 )
