@@ -20,6 +20,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            "pose_sub = pub_sub_py.sub_pose:main",
+            "draw_circle = pub_sub_py.circle:main",
+            "hello = pub_sub_py.hello:main",
             "farmer1 = pub_sub_py.publisher_farmer1:main",
             "farmer2 = pub_sub_py.publisher_farmer2:main",
             "shop = pub_sub_py.subscriber_shop:main",
