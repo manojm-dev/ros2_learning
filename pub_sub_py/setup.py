@@ -20,8 +20,12 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "farmer_1 = pub_sub_py.farmer1:main",
-            "shop = pub_sub_py.shop:main"
+            "farmer1 = pub_sub_py.publisher_farmer1:main",
+            "farmer2 = pub_sub_py.publisher_farmer2:main",
+            "shop = pub_sub_py.subscriber_shop:main",
+            "operand = pub_sub_py.publisher_operands:main",
+            "operator = pub_sub_py.pub_sub_operator:main",
+            "output = pub_sub_py.subscriber_output:main"
         ],
     },
 )
