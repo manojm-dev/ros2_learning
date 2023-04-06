@@ -1,15 +1,18 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
 
+
 def generate_launch_description():
 
-    roomba = Node(
+    roomba_idle = Node(
         package = 'parameter_py',
-        executable = 'roomba_node',
+        executable = 'roomba',
         name = 'roomba_node_1',
-        output = 'screen',
-        emulate_tty = True,
         parameters=[
         {'roomba_mode' : 'sweep'}
         ]
     )
+
+    return LaunchDescription([
+        roomba_idle,
+    ])
