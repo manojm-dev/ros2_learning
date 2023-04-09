@@ -95,3 +95,6 @@ def main():
         pass
 
     rclpy.shutdown()
+
+if __name__ == "__main__":
+    main()
