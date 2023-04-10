@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'action_server'
+package_name = 'action_server_py'
 
 setup(
     name=package_name,
@@ -20,8 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "fibonacci_server = action_server.custom_action_server:main",
-            "fibonacci_client = action_server.custom_action_client:main"
+            "fibonacci_server = action_server_py.custom_action_server:main",
+            "fibonacci_client = action_server_py.custom_action_client:main"
         ],
     },
 )
