@@ -58,7 +58,9 @@ Don't forge to source before working$ source ~/.bashrc
 
 ### 4)development tools
 
-#### 1)vscode 
+### 1)VSCode 
+
+#### i) install
 //install repository dependencies <br>
 sudo apt install software-properties-common apt-transport-https wget<br>
 
@@ -68,6 +70,11 @@ wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add
 //enable vscode repo <br>
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" <br>
 
+//install vscode <br>
+apt install vscode -y
+
+#### ii) configure
+echo "alias vsc="code --no-sandbox --user-data-dir=/root/.config/vscode/VSCodeData/"" >> ~/.bash_user
 
 ### 5) Error and fixes
 
