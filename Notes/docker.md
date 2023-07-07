@@ -6,12 +6,12 @@
 podman pull osrf/ros:humble-desktop
 
 ### 2) Create container:
-podman run -d -it --name rosdev_container -v /home/<user-name>/ros2_ws:/root/ --env="DISPLAY" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" osrf/ros:humble-desktop
+podman run -d -it --name rosdev_container -v /home/(username)/ros2_ws:/root/ --env="DISPLAY" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" osrf/ros:humble-desktop
 
 ### 3) Starting container
 podman start rosdev_container
 
-### 4) Enter into container
+### 4) Enter into container/
 podman exec -it rosdev_container /bin/bash
 
 ## Post-creation tasks:
@@ -55,7 +55,7 @@ echo "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash" >> ~/.b
 echo "source /root/.bash_user" >> ~/.bashrc <br>
 
 #### 3) workspace sourceing
-echo "alias swssource /install/setup.bash" >> ~/.bash_user
+echo "alias sws="source /install/setup.bash"" >> ~/.bash_user
 
 Don't forge to source before working$ source ~/.bashrc
 
