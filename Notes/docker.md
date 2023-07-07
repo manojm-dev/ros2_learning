@@ -40,6 +40,7 @@ apt install python3-colcon-common-extensions <br>
 #### iii) urdf & rviz:
 apt install ros-humble-xacro <br>
 apt install ros-humble-joint-state-publisher <br>
+apt install ros-humble-joint-state-publihser-gui <br>
 
 #### iv) Gazebo:
 * classic gazebo: <br> apt install ros-humble-ros-gz <br> apt install ros-humble-gazebo-ros
