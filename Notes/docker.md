@@ -6,13 +6,20 @@
 podman pull osrf/ros:humble-desktop
 
 ### 2) Create container:
-podman run -d -it --name rosdev_container -v /home/(username)/ros2_ws:/root/ --env="DISPLAY" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" osrf/ros:humble-desktop
+podman run -d -it --name humble_con -v /home/(username)/ros2_ws:/root/ --env="DISPLAY" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" osrf/ros:humble-desktop
 
 ### 3) Starting container
-podman start rosdev_container
+podman start humble_con
 
 ### 4) Enter into container/
-podman exec -it rosdev_container /bin/bash
+podman exec -it humble_con /bin/bash
+
+### 5) Saving container into image
+podman commit humble_con humble-desktop:latest
+
+### 6) Pushing image to docker hub
+                 (image name:tag)               (dockerhub username)  (dockerhub reponame:tag) <br>
+podman push humble_destop/:latest docker:docker.io/manojmdev/humble-desktop:latest
 
 ## Post-creation tasks:
 
