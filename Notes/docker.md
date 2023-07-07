@@ -29,6 +29,7 @@ apt install wget <br>
 apt install curl <br>
 apt install tmux <br>
 apt install python3-pip <br>
+apt install evince <br>
 
 #### ii) ros2:
 apt install ros-humble-turtlesim <br>
