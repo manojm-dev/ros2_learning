@@ -42,7 +42,7 @@ apt install ros-humble-xacro <br>
 apt install ros-humble-joint-state-publisher <br>
 
 #### iv) Gazebo:
-* classic gazebo: <br> apt install ros-humble-ros-gz
+* classic gazebo: <br> apt install ros-humble-ros-gz <br> apt install ros-humble-gazebo-ros
 * igition gazeob: <br> https://gazebosim.org/docs
 
 ### 3) Configuration
