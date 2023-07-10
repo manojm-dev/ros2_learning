@@ -38,6 +38,7 @@ apt install tmux <br>
 apt install python3-pip <br>
 apt install evince <br>
 apt install tmux <br>
+apt install tree <br>
 
 #### ii) ros2:
 apt install ros-humble-turtlesim <br>
