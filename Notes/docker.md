@@ -3,7 +3,8 @@
 ## Podman Setup
 
 ### 1) Pull image:
-podman pull osrf/ros:humble-desktop
+podman pull ros:humble
+* this repo is support both arm64 and amd64 architecture
 
 ### 2) Create container:
 podman run -d -it --name humble_con -v /home/(username)/ros2_ws:/root/ --env="DISPLAY" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" osrf/ros:humble-desktop
@@ -18,7 +19,6 @@ podman exec -it humble_con /bin/bash
 podman commit humble_con humble-desktop:latest
 
 ### 6) Pushing image to docker hub
-                 (image name:tag)               (dockerhub username)  (dockerhub reponame:tag) <br>
 podman push humble_destop/:latest docker:docker.io/manojmdev/humble-desktop:latest
 
 ## Post-creation tasks:
