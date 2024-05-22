@@ -1,8 +1,8 @@
-import os
-from glob import glob
 from setuptools import setup
+import os 
+from glob import glob
 
-package_name = 'learning_tf2_py'
+package_name = 'py_pubsub'
 
 setup(
     name=package_name,
@@ -24,11 +24,15 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'static_transform_publisher = learning_tf2_py.static_turtle_tf2_broadcaster:main',
-            'turtle_tf2_broadcaster = learning_tf2_py.turtle_tf2_broadcaster:main',
-            'turtle_tf2_listener = learning_tf2_py.turtle_tf2_listener:main',
-            'fixed_frame_tf2_broadcaster = learning_tf2_py.fixed_frame_tf2_broadcaster:main',
-            'dynamic_frame_tf2_broadcaster = learning_tf2_py.dynamic_frame_tf2_broadcaster:main',
+            "pose_sub = py_pubsub.sub_pose:main",
+            "draw_circle = py_pubsub.circle:main",
+            "hello = py_pubsub.hello:main",
+            "farmer1 = py_pubsub.publisher_farmer1:main",
+            "farmer2 = py_pubsub.publisher_farmer2:main",
+            "shop = py_pubsub.subscriber_shop:main",
+            "operand = py_pubsub.publisher_operands:main",
+            "operator = py_pubsub.pub_sub_operator:main",
+            "output = py_pubsub.subscriber_output:main"
         ],
     },
 )

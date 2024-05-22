@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>service_client_py</name>
+  <name>py_action_server</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
   <maintainer email="manoj.mb.murali@gmail.com">bot</maintainer>
   <license>TODO: License declaration</license>
 
   <depend>custom_interfaces</depend>
+  <depend>rclpy</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

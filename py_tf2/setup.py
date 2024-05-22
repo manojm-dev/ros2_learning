@@ -1,6 +1,8 @@
+import os
+from glob import glob
 from setuptools import setup
 
-package_name = 'service_client_py'
+package_name = 'py_tf2'
 
 setup(
     name=package_name,
@@ -10,6 +12,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', package_name, 'launch/'),
+         glob('launch/*launch.[pxy][yma]*')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -20,8 +24,11 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "addtwoints_service = service_client_py.service_node:main",
-            "addtwoints_client = service_client_py.client_node:main"
+            'static_transform_publisher = py_tf2.static_turtle_tf2_broadcaster:main',
+            'turtle_tf2_broadcaster = py_tf2.turtle_tf2_broadcaster:main',
+            'turtle_tf2_listener = py_tf2.turtle_tf2_listener:main',
+            'fixed_frame_tf2_broadcaster = py_tf2.fixed_frame_tf2_broadcaster:main',
+            'dynamic_frame_tf2_broadcaster = py_tf2.dynamic_frame_tf2_broadcaster:main',
         ],
     },
 )

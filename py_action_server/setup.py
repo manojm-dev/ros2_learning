@@ -1,8 +1,6 @@
-import os
-from glob import glob
 from setuptools import setup
 
-package_name = 'parameter_py'
+package_name = 'py_action_server'
 
 setup(
     name=package_name,
@@ -12,7 +10,6 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        (os.path.join('share', package_name), glob('launch/*launch.[pxy][yma]*')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -23,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "roomba = parameter_py.roomba_node:main",
+            "fibonacci_server = py_action_server.custom_action_server:main",
+            "fibonacci_client = py_action_server.custom_action_client:main"
         ],
     },
 )
